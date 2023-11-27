@@ -1,0 +1,9 @@
+- hosts: all
+  tasks:
+    - authorized_keys:
+        user: root
+        key: " {{ lookup ('file', 'john_doe.pub') }}"
+        state: present 
+
+        # He needs to get inside all the remote servers via ssh as root user.
+
