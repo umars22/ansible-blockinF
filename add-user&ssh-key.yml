@@ -6,5 +6,5 @@
         state: present
     - authorized_key:
         user: deploy
-        key: "{{ lookup('file', 'devops.pub') }}"
+        key: "{{ lookup('file', 'devops.pub') }}"       #we have the ssh key in the controller we push it to the remote machines 
         state: present
